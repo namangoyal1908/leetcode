@@ -9,11 +9,11 @@
 // - For every left position, scan all possible right positions
 // - Too slow for large inputs
 //
-// Variable Sliding Window - Microsoft Hiring Analogy 🏢
+// Variable Sliding Window - Microsoft Hiring Analogy 
 //
 // Imagine Microsoft has a project that needs sum >= target work done:
 // - They keep HIRING employees one by one from right (right++)
-//   until total work done >= target → project complete ✅
+//   until total work done >= target → project complete 
 //
 // - Once project is complete → start FIRING from the oldest hire (left++)
 //   to minimize team size (find smallest subarray)
