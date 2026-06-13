@@ -1,6 +1,3 @@
-# leetcode
-
-[README-2.md](https://github.com/user-attachments/files/28661246/README-2.md)
 # 🧠 LeetCode Solutions
 
 > Pattern-wise LeetCode solutions in C++ | Following Pratyush's DSA Sheet | Daily consistency
@@ -12,9 +9,9 @@
 | # | Pattern | Problems | Status |
 |---|---------|----------|--------|
 | 01 | Two Pointers | 12 | ✅ Done |
-| 02 | Fast & Slow Pointers | 8 | ⬜ Pending |
-| 03 | Sliding Window | 12 | ⬜ Pending |
-| 04 | Kadane's Algorithm | 6 | ⬜ Pending |
+| 02 | Fast & Slow Pointers | 8 | ✅ Done |
+| 03 | Sliding Window | 11 | ✅ Done |
+| 04 | Kadane's Algorithm | 6 | 🔄 In Progress |
 | 05 | Prefix Sum | 6 | ⬜ Pending |
 | 06 | Merge Intervals | 7 | ⬜ Pending |
 | 07 | In-place Reversal of LinkedList | 6 | ⬜ Pending |
@@ -48,7 +45,7 @@
 
 ---
 
-## ⬜ 02. Fast & Slow Pointers
+## ✅ 02. Fast & Slow Pointers
 
 | # | Problem | Difficulty | Link |
 |---|---------|------------|------|
@@ -63,7 +60,7 @@
 
 ---
 
-## ⬜ 03. Sliding Window
+## ✅ 03. Sliding Window
 
 | # | Problem | Difficulty | Link |
 |---|---------|------------|------|
@@ -74,14 +71,14 @@
 | 05 | No-repeat Substring | Hard | [LC](https://leetcode.com/problems/longest-substring-without-repeating-characters/) |
 | 06 | Longest Substring after Replacement | Hard | [LC](https://leetcode.com/problems/longest-repeating-character-replacement/) |
 | 07 | Longest Subarray with Ones after Replacement | Hard | [LC](https://leetcode.com/problems/max-consecutive-ones-iii/) |
-| 08 | Minimum Window Substring | Hard | [LC](https://leetcode.com/problems/minimum-window-substring/) |
+| 08 | Minimum Size Subarray Sum | Easy | [LC](https://leetcode.com/problems/minimum-size-subarray-sum/) |
 | 09 | Permutation in a String | Hard | [LC](https://leetcode.com/problems/permutation-in-string/) |
 | 10 | String Anagrams | Hard | [LC](https://leetcode.com/problems/find-all-anagrams-in-a-string/) |
 | 11 | Words Concatenation | Hard | [LC](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) |
 
 ---
 
-## ⬜ 04. Kadane's Algorithm
+## 🔄 04. Kadane's Algorithm
 
 | # | Problem | Difficulty | Link |
 |---|---------|------------|------|
