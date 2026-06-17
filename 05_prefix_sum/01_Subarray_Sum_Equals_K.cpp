@@ -11,16 +11,16 @@
 // - Sum of subarray [j+1, i] = prefixSum[i] - prefixSum[j]
 // - We want prefixSum[i] - prefixSum[j] == k
 // - → prefixSum[j] == prefixSum[i] - k
-// - So at every index ask: how many previous prefix sums equal (currentSum - k)?
+// - At every index ask: how many previous prefix sums equal (currentSum - k)?
 // - HashMap stores {prefixSum → frequency} for O(1) lookup
 //
-// Why freq[0] = 1?
+// Why f[0] = 1?
 // - Handles case where subarray starts from index 0
-// - If prefixSum == k → prefixSum - k == 0 → needs freq[0] to exist
+// - If prefixSum == k → prefixSum - k == 0 → needs f[0] to exist
 // - Without this → subarrays starting at index 0 are missed
 //
-// Why count += freq[prefixSum - k] before updating freq?
-// - Must check BEFORE adding current prefix sum to map
+// Why check BEFORE updating map?
+// - Must add to result before inserting current prefix sum
 // - Otherwise current index could match itself → wrong count
 //
 // Time: O(n) | Space: O(n)
@@ -31,23 +31,24 @@ using namespace std;
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
-        unordered_map<int, int> freq;
-        freq[0] = 1;  // empty prefix sum → handles subarrays from index 0
+        int n = nums.size();
+        int sum = 0;
 
-        int prefixSum = 0;
-        int count = 0;
+        unordered_map<int, int> f;
+        f[0] = 1;  // empty prefix sum → handles subarrays from index 0
 
-        for (int num : nums) {
-            prefixSum += num;
+        int res = 0;
 
-            // how many previous prefix sums make current subarray sum == k
-            if (freq.count(prefixSum - k)) {
-                count += freq[prefixSum - k];
-            }
+        for (int i = 0; i < n; i++) {
+            sum += nums[i];
 
-            freq[prefixSum]++;  // add current prefix sum to map
+            int ques = sum - k;   // target previous prefix sum
+            int freq = f[ques];   // how many times it appeared
+            res += freq;
+
+            f[sum]++;  // add current prefix sum to map
         }
 
-        return count;
+        return res;
     }
 };
