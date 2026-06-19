@@ -54,6 +54,6 @@ public:
                 return i;
         }
 
-        return -1;  // no pivot found
+        return -1;  
     }
 };
