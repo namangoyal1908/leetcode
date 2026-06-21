@@ -26,7 +26,7 @@
 // - Check existing matches before adding current remainder
 // - Avoids counting current index against itself
 //
-// Time: O(n) | Space: O(min(n, k))
+// Time: O(n) | Space: O(min(n, k)
 
 #include <bits/stdc++.h>
 using namespace std;
