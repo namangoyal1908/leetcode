@@ -3,30 +3,37 @@
 // Difficulty: Medium
 // Pattern: Prefix Sum + HashMap
 //
-// Problem in simple terms:
-// - Find longest subarray with equal number of 0s and 1s
+// Brute Force: O(n²)
+// - Check every subarray, count 0s and 1s
+// - Track maximum length where count(0) == count(1)
+// - Too slow for large inputs
 //
-// Key Trick:
-// - Treat 0 as -1 and 1 as +1
-// - If subarray has equal 0s and 1s → sum of that subarray = 0
-// - So we need two indices i, j where prefixSum[i] == prefixSum[j]
-// - Subarray between them has sum 0 → equal 0s and 1s
+// Prefix Sum + HashMap - The "Red and Green" Insight
 //
-// Why mp[0] = -1?
-// - If prefixSum becomes 0 at index i → subarray [0, i] is valid
-// - length = i - (-1) = i + 1 → correct length using imaginary index -1
-// - Without this → we'd miss subarrays starting from index 0
+// Split the array mentally into two parts:
+// - RED part   → wrong section (unequal 0s and 1s so far)
+// - GREEN part → correct section (equal 0s and 1s)
 //
-// Why store FIRST occurrence only?
-// - We want LONGEST subarray → need earliest index with same sum
-// - If sum repeats → don't update map → keep earliest index
-// - This guarantees maximum possible length when match found
+// To find the longest GREEN part, we need to know:
+// "what prefix do I need to CUT from the left to make it balanced?"
 //
-// Why different from Subarray Sum == K?
-// - That problem: COUNT all subarrays with sum == k → uses frequency
-// - This problem: LONGEST subarray with sum == 0 → uses first index only
+// Key Trick: treat 0s and 1s as -1 and +1 implicitly via diff = zero - one
+//   → diff == 0 means equal 0s and 1s from index 0 → record i+1
+//   → same diff seen before at index idx means:
+//       the subarray (idx+1 to i) has equal 0s and 1s
+//       → the RED prefix cancelled out → what remains is GREEN
+//
+// HashMap stores: { diff → first index where this diff was seen }
+// Once same diff appears again → the chunk between is perfectly balanced
+//
+// Example:
+//   nums = [0, 1, 0, 0, 1, 1]
+//   diff  = [1, 0, 1, 2, 1, 0]
+//            ↑        ↑
+//         diff=1     diff=1 again → subarray [1..4] is balanced ✅
 //
 // Time: O(n) | Space: O(n)
+// Single pass through array, HashMap stores at most n distinct diffs
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -34,24 +41,32 @@ using namespace std;
 class Solution {
 public:
     int findMaxLength(vector<int>& nums) {
-        unordered_map<int, int> mp;
-        int sum = 0;
-        int maxi = 0;
-        mp[0] = -1;  // important: handles subarray starting from index 0
+        int n = nums.size();
+        int zero = 0, one = 0;
+        int res = 0;
+        unordered_map<int, int> f;  // { diff → first index seen }
 
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] == 0)
-                sum += -1;
-            else
-                sum += 1;
+        for (int i = 0; i < n; i++) {
+            if (nums[i] == 0) zero++;
+            else one++;
 
-            if (mp.find(sum) != mp.end()) {
-                maxi = max(maxi, i - mp[sum]);
+            int diff = zero - one;
+
+            if (diff == 0) {
+                // Balanced from index 0 → i, entire prefix is GREEN
+                res = max(res, i + 1);
+                continue;
+            }
+
+            if (f.find(diff) == f.end()) {
+                f[diff] = i;  // first time seeing this diff → store it
             } else {
-                mp[sum] = i;  // store first occurrence only
+                // Same diff seen before → RED prefix cancelled out
+                int len = i - f[diff];  // GREEN part length
+                res = max(res, len);
             }
         }
 
-        return maxi;
+        return res;
     }
 };
