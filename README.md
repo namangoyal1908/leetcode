@@ -11,12 +11,12 @@
 | 01 | Two Pointers | 12 | ✅ Done |
 | 02 | Fast & Slow Pointers | 8 | ✅ Done |
 | 03 | Sliding Window | 11 | ✅ Done |
-| 04 | Kadane's Algorithm | 6 | 🔄 In Progress |
-| 05 | Prefix Sum | 6 | ⬜ Pending |
-| 06 | Merge Intervals | 7 | ⬜ Pending |
+| 04 | Kadane's Algorithm | 6 | ✅ Done |
+| 05 | Prefix Sum | 6 | ✅ Done |
+| 06 | Merge Intervals | 7 | ✅ Done |
 | 07 | In-place Reversal of LinkedList | 6 | ⬜ Pending |
-| 08 | Stack | 9 | ⬜ Pending |
-| 09 | Hash Maps | 4 | ⬜ Pending |
+| 08 | Stack | 9 | ✅ Done |
+| 09 | Hash Maps | 4 | ✅ Done |
 | 10 | Binary Search | 22 | ⬜ Pending |
 | 11 | Heap | 18 | ⬜ Pending |
 | 12 | Recursion & Backtracking | 10 | ⬜ Pending |
@@ -78,7 +78,7 @@
 
 ---
 
-## 🔄 04. Kadane's Algorithm
+## ✅ 04. Kadane's Algorithm
 
 | # | Problem | Difficulty | Link |
 |---|---------|------------|------|
@@ -91,7 +91,7 @@
 
 ---
 
-## ⬜ 05. Prefix Sum
+## ✅ 05. Prefix Sum
 
 | # | Problem | Difficulty | Link |
 |---|---------|------------|------|
@@ -104,7 +104,7 @@
 
 ---
 
-## ⬜ 06. Merge Intervals
+## ✅ 06. Merge Intervals
 
 | # | Problem | Difficulty | Link |
 |---|---------|------------|------|
@@ -131,13 +131,13 @@
 
 ---
 
-## ⬜ 08. Stack
+## ✅ 08. Stack
 
 | # | Problem | Difficulty | Link |
 |---|---------|------------|------|
 | 01 | Remove Adjacent Duplicates | Easy | [LC](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) |
 | 02 | Balanced Parentheses | Easy | [LC](https://leetcode.com/problems/valid-parentheses/) |
-| 03 | Next Greater Element | Easy | [LC](https://leetcode.com/problems/next-greater-element-ii/) |
+| 03 | Next Greater Element | Medium | [LC](https://leetcode.com/problems/next-greater-element-ii/) |
 | 04 | Daily Temperatures | Easy | [LC](https://leetcode.com/problems/daily-temperatures/) |
 | 05 | Remove Nodes from Linked List | Easy | [LC](https://leetcode.com/problems/remove-nodes-from-linked-list/) |
 | 06 | Remove All Adjacent Duplicates II | Medium | [LC](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/) |
@@ -146,7 +146,7 @@
 
 ---
 
-## ⬜ 09. Hash Maps
+## ✅ 09. Hash Maps
 
 | # | Problem | Difficulty | Link |
 |---|---------|------------|------|
