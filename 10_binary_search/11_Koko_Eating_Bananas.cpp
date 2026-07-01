@@ -24,7 +24,7 @@
 // - At each guess speed: calculate hours needed via fun()
 // - If hours needed > h (allowed hours) → speed is TOO SLOW →
 //   need to go faster → low = guess+1
-// - Otherwise (hours <= h) → this speed WORKS → record res=guess,
+// - Otherwise (hours <= h) → this speed WORKS → record res=gues
 //   but try to go SLOWER (high = guess-1) to find the minimum valid speed
 //
 // Why does minimizing speed work via binary search here?
