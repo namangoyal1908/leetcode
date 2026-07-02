@@ -63,7 +63,7 @@ class Solution {
           return true;
       }return false;
       
-  }
+  
     int aggressiveCows(vector<int> &stalls, int k) {
         
         int n=stalls.size();
