@@ -2,7 +2,7 @@
 // Link: https://www.geeksforgeeks.org/problems/aggressive-cows/1
 // Difficulty: Hard
 // Pattern: Binary Search on Answer
-//
+
 // Problem in simple terms:
 // - Place k cows in stalls such that the MINIMUM distance between
 //   any two cows is MAXIMIZED
