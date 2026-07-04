@@ -6,14 +6,14 @@
 // Problem in simple terms:
 // - Place k cows in stalls such that the MINIMUM distance between
 //   any two cows is MAXIMIZED
-//
+
 // How is it similar to Koko Eating Bananas?
 // - Both use "Binary Search on Answer" → search space is not an array
 //   but the RANGE of possible answers
 // - Koko: search space = [1, max(piles)], minimize speed
 // - Cows: search space = [1, max_stall - min_stall], maximize min distance
 // - Both have a helper() that checks if a given "guess" is feasible
-//
+
 // helper() function:
 // - Given a minimum distance 'guess', checks if we can place k cows
 //   such that every adjacent pair is at least 'guess' apart
