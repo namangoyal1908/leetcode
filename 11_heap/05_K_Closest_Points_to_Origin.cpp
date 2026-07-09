@@ -32,7 +32,6 @@
 //   MAX heap for top k smallest/closest
 //
 // Time: O(n log k) | Space: O(k)
-
 #include <bits/stdc++.h>
 using namespace std;
 
