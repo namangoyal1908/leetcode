@@ -24,7 +24,7 @@
 //   → if new point's distance < heap top → closer than the current
 //     farthest among k → pop farthest, push new point
 // - At the end heap contains k closest points → extract and return
-//
+
 // Why MAX heap for CLOSEST k (not MIN heap)?
 // - We want to REMOVE the farthest among k candidates when a closer
 //   point arrives → MAX heap gives O(1) access to the farthest
