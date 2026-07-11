@@ -2,7 +2,7 @@
 // Link: https://leetcode.com/problems/reorganize-string/
 // Difficulty: Medium
 // Pattern: Heap (Greedy + Max Heap)
-//
+
 // Approach:
 // - Build frequency map for all characters
 // - Push all {freq, char} pairs into a MAX heap → most frequent char
