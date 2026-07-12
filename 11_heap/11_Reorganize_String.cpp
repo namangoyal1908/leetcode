@@ -9,7 +9,7 @@
 //   always at the top
 // - Greedily place the most frequent character at each position
 //   → ensures no two adjacent characters are same as long as possible
-//
+
 // Two cases per iteration:
 // - Case 1: heap top character != last placed character (res[seat-1])
 //   → safe to place it → push, decrement freq, re-push if freq > 0
