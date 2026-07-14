@@ -22,7 +22,7 @@
 //   → pick the most profitable (pq.top()) → add profit to w → pop
 // - If pq is empty after inner while → no affordable project exists
 //   → can't do anything even with remaining k turns → return w early
-//
+
 // Why sort by capital and use idx (not re-scan every turn)?
 // - Re-scanning all n projects every turn = O(kn) → slow
 // - Since projects sorted by capital and w only INCREASES, any project
