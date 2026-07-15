@@ -28,7 +28,7 @@
 // - Since projects sorted by capital and w only INCREASES, any project
 //   affordable before is still affordable → idx never goes back
 //   → idx only moves forward → O(n) total across all k iterations
-//
+
 // Why MAX heap for profits?
 // - Always want to pick the HIGHEST profit available project
 // - More profit now = more capital = unlocks more projects next turn
