@@ -12,7 +12,7 @@
 // - Pair each project as {capital_required, profit} and SORT by capital
 //   → so projects we can afford are always at the front of the sorted list
 // - Use a MAX heap to always pick the MOST PROFITABLE available project
-//
+
 // Two pointer style logic inside while(k--):
 // - Inner while: push ALL projects we can currently AFFORD (capital[i] <= w)
 //   into the MAX heap → these are our "available" choices right now
