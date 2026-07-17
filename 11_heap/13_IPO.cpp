@@ -33,7 +33,7 @@
 // - Always want to pick the HIGHEST profit available project
 // - More profit now = more capital = unlocks more projects next turn
 //   (greedy: maximize current gain to maximize future options)
-//
+
 // Time: O(n log n) sort + O((n+k) log n) heap operations
 // Space: O(n)
 
