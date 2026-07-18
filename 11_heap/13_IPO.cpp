@@ -2,7 +2,7 @@
 // Link: https://leetcode.com/problems/ipo/
 // Difficulty: Hard
 // Pattern: Heap (Greedy + Sort + Max Heap)
-//
+
 // Problem in simple terms:
 // - You have initial capital w and can do at most k projects
 // - Each project requires minimum capital to START and gives a profit
