@@ -1,7 +1,7 @@
 // Problem: IPO
 // Link: https://leetcode.com/problems/ipo/
 // Difficulty: Hard
-// Pattern: Heap (Greedy + Sort + Max Hea
+// Pattern: Heap (Greedy + Sort + Max Hcscscs
 
 // Problem in simple terms:
 // - You have initial capital w and can do at most k projects
